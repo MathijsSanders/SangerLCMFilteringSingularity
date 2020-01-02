@@ -3,7 +3,8 @@ OSVersion: disco
 MirrorURL: http://us.archive.ubuntu.com/ubuntu/
 
 %labels
-MAINTAINER MathijsSanders
+Maintainer MathijsSanders
+Version v1.0
 
 %post
 sed -i 's/$/ universe/' /etc/apt/sources.list
