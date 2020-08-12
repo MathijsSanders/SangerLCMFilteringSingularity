@@ -1,16 +1,13 @@
-BootStrap: debootstrap
-OSVersion: disco
-MirrorURL: http://us.archive.ubuntu.com/ubuntu/
+Bootstrap: docker
+From: ubuntu:18.04
 
 %labels
 Maintainer MathijsSanders
 Version v1.1
 
 %post
-sed -i 's/$/ universe/' /etc/apt/sources.list
-echo "deb http://us.archive.ubuntu.com/ubuntu bionic main universe" >> /etc/apt/sources.list
 apt-get -y update
-apt-get -y install make openjdk-12-jre git samtools gcc-4.8 g++-4.8 zlib1g-dev
+apt-get -y install make openjdk-11-jre git samtools gcc-4.8 g++-4.8 zlib1g-dev
 apt-get clean
 ln -s /usr/bin/g++-4.8 /usr/bin/g++
 ln -s /usr/bin/gcc-4.8 /usr/bin/gcc
