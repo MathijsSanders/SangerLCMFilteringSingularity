@@ -4,7 +4,7 @@ MirrorURL: http://us.archive.ubuntu.com/ubuntu/
 
 %labels
 Maintainer MathijsSanders
-Version v1.0
+Version v1.1
 
 %post
 sed -i 's/$/ universe/' /etc/apt/sources.list
